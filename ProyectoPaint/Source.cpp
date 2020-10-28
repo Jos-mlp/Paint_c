@@ -68,7 +68,6 @@ int main(){
 		ALLEGRO_BITMAP* lineaDivisora = al_load_bitmap("Recursos/Lid.png");
 		ALLEGRO_BITMAP* grosor_lineas = al_load_bitmap("Recursos/GrosorLineas.png");
 		//mantiene en ejecucion el programa
-	while (true) {
 	while (ejecucion==true) {
 		//imprime las imagenesw
 		al_draw_bitmap(colores24,0,0,0);
