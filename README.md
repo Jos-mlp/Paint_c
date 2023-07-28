@@ -16,7 +16,7 @@ Este es un programa desarrollado en C++ que implementa una versión básica de P
 ## Uso del Programa  
 Una  vez  que  ejecutes  el  programa, se abrira una terminal en donde debes seleccionar el tamaño del lienzo, y luego se  abrirá  una  ventana  de  dibujo  donde  podrás  hacer  clic  y  arrastrar  el  mouse  para  dibujar  en  el  área  de  trabajo.  Puedes  cambiar  el  color  del  pincel y el grosor del pinse.  Además,  puedes  insertar figuras disponibles en la barra de herramientoas.
 
-![Captura de pantalla 1](/ProyectoPaint\Recursos/capturas/c1.png)
+![Captura de pantalla 1](/ProyectoPaint/Recursos/capturas/c1.png)
 
 ![Captura de pantalla 2](/ProyectoPaint/Recursos/capturas/c2.png)
 
