@@ -3,7 +3,7 @@
 #include <allegro5/allegro_primitives.h>
 LineaCurva::LineaCurva(int x1, int y1, int x2, int y2, ALLEGRO_COLOR color, int grueso)
 {
-	float cx, cy, r, start_theta, delta_theta,aux;
+	float cx, cy, r, start_theta=1, delta_theta=1,aux;
 	//radio
 	cx = (x1 + x2) / 2;
 	cy = (y1 + y2) / 2;

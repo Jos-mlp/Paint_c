@@ -26,7 +26,7 @@ void Desactivar() {
 int main(){
 	int opcion,x,y,a,l,x1,y1,x2,y2;
 	cout << "Escoga un lienzo" << endl;
-	cout << "1. Pequeño" << endl;
+	cout << "1. Pequenio" << endl;
 	cout << "2. Mediano" << endl;
 	cout << "3. Grande" << endl;
 	cin >> opcion;
@@ -87,10 +87,10 @@ int main(){
 		al_draw_bitmap(grosor_lineas, 868, 9, 0);
 		//Coloca los colores seleccionados
 
-			//color del borde
-			al_draw_filled_rectangle(802, 70, 857, 127, nuevo.ObtenerColor());
-			//color del fondo
-			al_draw_filled_rectangle(815.75, 84.25, 843.25, 112.5, nuevo.ObtenerColor2());
+		//color del borde
+		al_draw_filled_rectangle(802, 70, 857, 127, nuevo.ObtenerColor());
+		//color del fondo
+		al_draw_filled_rectangle(815.75, 84.25, 843.25, 112.5, nuevo.ObtenerColor2());
 
 		//Inicializa la variable evento y le pasa el evento generado
 		al_wait_for_event(event_queue, &evento);
@@ -369,17 +369,31 @@ int main(){
 				}
 
 			}
-		
+			
 			//Funciones sobre el lienzo
 			if (x > 0 && y > 188) {
 				//pintar
 				if (nuevo.ObtenerFuncionActiva() == 1) {
-					if (evento.mouse.button & 1) {
-						Activar();
+					if (evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN) {
+						
+						if (evento.mouse.button & 1) {
+							// Se ha presionado el botón izquierdo del mouse
+							Activar();
+						}
+						if (evento.mouse.button & 2) {
+							// Se ha presionado el botón derecho del mouse
+							Desactivar();
+						}
 					}
-					if (evento.mouse.button & 2) {
+					if (evento.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP) {	
+						// Se ha soltado el botón izquierdo del mouse
+						cout << "Se solto el mouse";
 						Desactivar();
+						// Aquí puedes colocar el código que deseas ejecutar cuando se suelta el botón izquierdo
+						
 					}
+	
+					
 					if (presionado == true) {
 						al_draw_filled_rectangle(x, y, x + nuevo.ObtenerGruesoLinea(), y + nuevo.ObtenerGruesoLinea(), nuevo.ObtenerColor());
 					}
